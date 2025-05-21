@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zenloop Support Chatbot</title>
+
+  <!-- Floating chat bubble -->
+  <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/04/02/09/20250402093126-AIZK3NTV.js"></script>
+
+  <!-- Embedded chatbot styles -->
+  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+
+    #webchat .bpWebchat {
+      position: unset;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    #webchat .bpFab {
+      display: none;
+    }
+
+    #webchat {
+      width: 500px;
+      height: 500px;
+      max-width: 95vw;
+      max-height: 90vh;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Zenloop Support</h1>
+    <p>The embedded chatbot appears below. You can also use the chat bubble in the corner.</p>
+    <div id="webchat"></div>
+  </div>
+
+  <!-- Embedded Webchat Config -->
+  <script>
+    window.botpress.on("webchat:ready", () => {
+      window.botpress.open();
+    });
+
+    window.botpress.init({
+      "botId": "dec3c717-4951-4fc4-9728-1a6928fea614",
+      "configuration": {
+        "composerPlaceholder": "Ask for help",
+        "botName": "zenloop's support chat",
+        "botAvatar": "https://files.bpcontent.cloud/2025/05/21/09/20250521090433-X4QDDH0M.png",
+        "botDescription": "zenloop's support chatbot",
+        "fabImage": "https://files.bpcontent.cloud/2025/05/21/08/20250521085425-HW1EFEBI.png",
+        "website": {
+          "title": "support.zenloop.com",
+          "link": "support.zenloop.com"
+        },
+        "email": {
+          "title": "support@zenloop.com",
+          "link": "support@zenloop.com"
+        },
+        "termsOfService": {
+          "title": "Terms of service",
+          "link": "https://www.zenloop.com/en/legal/terms-of-service/"
+        },
+        "privacyPolicy": {
+          "title": "Privacy policy",
+          "link": "https://www.zenloop.com/en/legal/privacy/"
+        },
+        "color": "#0b55cc",
+        "variant": "soft",
+        "themeMode": "dark",
+        "fontFamily": "inter",
+        "radius": 3.5,
+        "showPoweredBy": false,
+        "allowFileUpload": true
+      },
+      "clientId": "3f858a1a-efe7-4a2e-aed9-74687ff42157",
+      "selector": "#webchat"
+    });
+  </script>
+</body>
+</html>
